@@ -31,6 +31,8 @@ article h1 {
 
     color: #bbb;
 
+    text-align: center;
+
     left: 50%; /* X */
     top: 0; /* Y */
     transform: translate(-50%, -60%); /* X, Y */
@@ -90,7 +92,8 @@ article h1 {
     text-align: center;
 }
 #inputs input[type="number"]:focus {
-    width: 25%;
+    width: 30%;
+
     background-color: #ccc;
 }
 
@@ -110,3 +113,18 @@ article h1 {
 #inputs input[type="button"]:hover { background-color: #11111150; }
 #inputs input[type="button"]:active { background-color: #111; }
 #inputs input[type="button"]:disabled { opacity: 20%; }
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    color: #bbb;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer a {
+    text-decoration: none;
+
+    color: #ddd;
+}
+footer a:hover { text-decoration: underline; }
