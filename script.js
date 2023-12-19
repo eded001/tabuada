@@ -3,10 +3,9 @@ const inputButton = document.getElementsByTagName('input')[1];
 const resultados = document.getElementById('resultado');
 
 inputButton.onclick = () => {
-    const numConvert = parseInt(inputNumber.value);
+    numConvert = parseInt(inputNumber.value);
 
-    if(!isNaN(numConvert) && numConvert >= 0) {
-        // se numConvert não for um NaN AND numConvert for diferente de 0, então...
+    if(numConvert > 0 && numConvert <= 100) {
         resultados.innerText = '';
 
         inputButton.setAttribute('disabled', 'disabled');
@@ -26,12 +25,24 @@ inputButton.onclick = () => {
             }, i * 550);
         }
 
-        console.log('programa finalizado');
-    } else {
-        console.error('O valor inserido não é um número ou é 0 (zero) ou é menor');
-        const p = document.createElement('p');
+        console.log('Programa finalizado!');
+    } else if(numConvert > 100) {
+        console.error('Não é aceito valores maiores que 100');
+
+        resultados.innerText = '';
+
+        p = document.createElement('p');
         resultados.appendChild(p);
 
-        p.innerText = 'O valor inserido não é um número ou é 0 (zero)';
+        p.innerText = 'Não é aceito valores maiores que 100';
+    } else {
+        console.error('Não é aceito números menores ou iguais a 0 (zero)');
+
+        resultados.innerText = '';
+
+        p = document.createElement('p');
+        resultados.appendChild(p);
+
+        p.innerText = 'Não é aceito números menores ou iguais a 0 (zero)';
     }
 }

@@ -31,6 +31,8 @@ article h1 {
 
     color: #bbb;
 
+    text-align: center;
+
     left: 50%; /* X */
     top: 0; /* Y */
     transform: translate(-50%, -60%); /* X, Y */
@@ -90,7 +92,8 @@ article h1 {
     text-align: center;
 }
 #inputs input[type="number"]:focus {
-    width: 25%;
+    width: 30%;
+
     background-color: #ccc;
 }
 
